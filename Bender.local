@@ -1,0 +1,2 @@
+overrides:
+  snitch_cluster: { path: "working_dir/snitch_cluster" } # Temporary override by Bender using `bender clone` command

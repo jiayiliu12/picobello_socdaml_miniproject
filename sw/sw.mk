@@ -33,6 +33,13 @@ ifneq (,$(filter chs-bootrom% chs-sw% sn% pb-sn-tests% sw%,$(MAKECMDGOALS)))
 include $(SN_ROOT)/target/snitch_cluster/sw.mk
 endif
 
+# SNITCH APPLICATIONS
+flashattention_2_BUILD_DIR = $(PB_SNITCH_SW_DIR)/apps/build
+$(eval include $(SN_ROOT)/target/snitch_cluster/sw/apps/dnn/flashattention_2/app.mk)
+
+mha_BUILD_DIR = $(PB_SNITCH_SW_DIR)/apps/build
+$(eval include $(SN_ROOT)/target/snitch_cluster/sw/apps/dnn/mha/app.mk)
+
 # Collect Snitch tests which should be built
 PB_SNRT_TESTS_DIR      = $(PB_SNITCH_SW_DIR)/tests
 PB_SNRT_TESTS_BUILDDIR = $(PB_SNITCH_SW_DIR)/tests/build
@@ -100,8 +107,9 @@ chs-sw-tests-clean:
 
 # Alias sn-clean-tests to align target with Picobello naming convention
 sn-tests-clean: sn-clean-tests
+sn-apps-clean: sn-clean-apps
 
 .PHONY: sw sw-tests sw-clean sw-tests-clean
-sw sw-tests: chs-sw-tests sn-tests pb-sn-tests
+sw sw-tests: chs-sw-tests sn-tests pb-sn-tests sn-apps
 
-sw-clean sw-tests-clean: chs-sw-tests-clean sn-tests-clean clean-pb-sn-tests
+sw-clean sw-tests-clean: chs-sw-tests-clean sn-tests-clean clean-pb-sn-tests sn-apps-clean
