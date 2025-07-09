@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "flashattention_2_fp16.h": "c",
-        "dnn.h": "c"
+        "dnn.h": "c",
+        "data.h": "c",
+        "blas.h": "c"
     }
 }

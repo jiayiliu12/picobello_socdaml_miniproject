@@ -34,8 +34,8 @@ include $(SN_ROOT)/target/snitch_cluster/sw.mk
 endif
 
 # SNITCH APPLICATIONS
-flashattention_2_BUILD_DIR = $(PB_SNITCH_SW_DIR)/apps/build
-$(eval include $(SN_ROOT)/target/snitch_cluster/sw/apps/dnn/flashattention_2/app.mk)
+# flashattention_2_BUILD_DIR = $(PB_SNITCH_SW_DIR)/apps/build
+# $(eval include $(SN_ROOT)/target/snitch_cluster/sw/apps/dnn/flashattention_2/app.mk)
 
 mha_BUILD_DIR = $(PB_SNITCH_SW_DIR)/apps/build
 $(eval include $(SN_ROOT)/target/snitch_cluster/sw/apps/dnn/mha/app.mk)
