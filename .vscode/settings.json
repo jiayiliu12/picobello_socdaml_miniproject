@@ -3,6 +3,7 @@
         "flashattention_2_fp16.h": "c",
         "dnn.h": "c",
         "data.h": "c",
-        "blas.h": "c"
+        "blas.h": "c",
+        "fused_concat_linear.h": "c"
     }
 }

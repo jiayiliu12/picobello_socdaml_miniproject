@@ -40,6 +40,9 @@ endif
 mha_BUILD_DIR = $(PB_SNITCH_SW_DIR)/apps/build
 $(eval include $(SN_ROOT)/target/snitch_cluster/sw/apps/dnn/mha/app.mk)
 
+# fused_concat_linear_BUILD_DIR = $(PB_SNITCH_SW_DIR)/apps/build
+# $(eval include $(SN_ROOT)/target/snitch_cluster/sw/apps/dnn/fused_concat_linear/app.mk)
+
 # Collect Snitch tests which should be built
 PB_SNRT_TESTS_DIR      = $(PB_SNITCH_SW_DIR)/tests
 PB_SNRT_TESTS_BUILDDIR = $(PB_SNITCH_SW_DIR)/tests/build
